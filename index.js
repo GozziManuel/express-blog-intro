@@ -3,6 +3,8 @@ const app = express();
 const port = 3000;
 const appurl = `http://localhost:${port}`;
 
+app.use(express.static("public"));
+
 app.get("/", (req, res) => {
   res.json({
     message: "Bevenuti nel mio Ristorante!",
